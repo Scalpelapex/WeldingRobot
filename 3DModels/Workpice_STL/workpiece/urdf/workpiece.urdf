@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="workpiece">
+  <link
+    name="base_link_work">
+    <inertial>
+      <origin
+        xyz="-0.0584026343516358 -0.00479594603314594 -0.0265293383270911"
+        rpy="0 0 0" />
+      <mass
+        value="106.8" />
+      <inertia
+        ixx="6.49692687473991"
+        ixy="1.4826999581811E-16"
+        ixz="3.30624136275581E-16"
+        iyy="6.31109354140658"
+        iyz="-3.60806178371154E-16"
+        izz="11.5778333333333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://workpiece/meshes/base_link_work.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://workpiece/meshes/base_link_work.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MATLAB_AUBOI10_URDF">
+  <!-- new World frame -->
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy=" 3.1415926536 3.1415926536 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="base"/>
+  <joint name="base_link_base_fixed_joint" type="fixed">
+    <origin rpy="0 0 -3.1415926536" xyz="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000292 -2.2568E-08 -0.28134"
+        rpy="0 0 0" />
+      <mass
+        value="13.382" />
+      <inertia
+        ixx="0.16469"
+        ixy="8.9543E-10"
+        ixz="3.5438E-05"
+        iyy="0.16509"
+        iyz="-6.7529E-09"
+        izz="0.12494" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0075992 5.6878E-07 -0.0045007"
+        rpy="0 0 0" />
+      <mass
+        value="4.1751" />
+      <inertia
+        ixx="0.020291"
+        ixy="1.9082E-08"
+        ixz="-0.00021358"
+        iyy="0.021395"
+        iyz="-3.9195E-08"
+        izz="0.013737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.19216 0.19216 0.19216 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.16182"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.0003563 -1.2098E-07 0.3406"
+        rpy="0 0 0" />
+      <mass
+        value="23.834" />
+      <inertia
+        ixx="0.3425"
+        ixy="-4.1558E-06"
+        ixz="-0.00025501"
+        iyy="0.35569"
+        iyz="-8.7805E-07"
+        izz="0.060404" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.197 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.004073 2.7005E-07 0.28596"
+        rpy="0 0 0" />
+      <mass
+        value="9.6055" />
+      <inertia
+        ixx="0.14354"
+        ixy="1.2386E-06"
+        ixz="0.00030865"
+        iyy="0.14392"
+        iyz="-4.4879E-08"
+        izz="0.00896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="-0.1235 0 0.647"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.1252 2.2861E-07 -0.00033227"
+        rpy="0 0 0" />
+      <mass
+        value="0.58941" />
+      <inertia
+        ixx="0.00086707"
+        ixy="1.9633E-08"
+        ixz="-2.6933E-07"
+        iyy="0.00089713"
+        iyz="-7.5636E-09"
+        izz="0.00047706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.6005"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.00033227 -2.2861E-07 0.099901"
+        rpy="0 0 0" />
+      <mass
+        value="0.58941" />
+      <inertia
+        ixx="0.00047706"
+        ixy="7.5636E-09"
+        ixz="-2.6933E-07"
+        iyy="0.00089713"
+        iyz="-1.9633E-08"
+        izz="0.00086707" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.1278 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.26205 -0.00072355 0.099397"
+        rpy="0 0 0" />
+      <mass
+        value="1.2274" />
+      <inertia
+        ixx="0.001807"
+        ixy="2.4061E-06"
+        ixz="-0.00063247"
+        iyy="0.0040888"
+        iyz="9.7693E-07"
+        izz="0.0028429" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MATLAB_AUBOI10_URDF/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1025"
+      rpy="0 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="150"
+      velocity="30" />
+  </joint>
+
+  <!-- new content -->
+  <joint name="ee_fixed_joint" type="fixed">
+    <parent link="link6"/>
+    <child link="ee_link"/>
+    <origin rpy="0.0 0.0 1.57079632679" xyz="0.094 0.0 0.5"/>
+  </joint>
+  <link name="ee_link">
+    <collision>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.01 0 0"/>
+    </collision>
+  </link>
+
+  <link name="tool0"/>
+  <joint name="tool0_fixed_joint" type="fixed">
+    <!--origin rpy="-1.57079632679 0 0" xyz="0.566 0.0 0.09"/-->
+    <origin rpy="-1.57079632679 0 0" xyz="0.566 0 -0.0091"/>
+    <parent link="link6"/>
+    <child link="tool0"/>
+  </joint>
+</robot>
